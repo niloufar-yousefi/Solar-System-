@@ -1,0 +1,771 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.opacity {
+  opacity: 1 !important;
+}
+
+.figure {
+  width: 100%;
+  height: 800px;
+  top: 0;
+}
+
+.img {
+  transform: translate(0, 30%);
+}
+
+.span {
+  top: 30%;
+  background: linear-gradient(rgba(0, 0, 0, 0.0745098039), rgba(0, 0, 0, 0.8862745098) 40%);
+}
+
+body {
+  width: 100%;
+}
+body main {
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+}
+body main .box {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: no-repeat center/cover url("../img/galaxy.jpg");
+}
+body main .box > .btn {
+  cursor: pointer;
+  position: absolute;
+  z-index: 999;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 50px;
+  background: none;
+  border: 3px solid rgba(215, 212, 212, 0.804);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: capitalize;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+body main .box > .btn:hover {
+  color: rgba(255, 255, 255, 0.406);
+  border: 3px solid rgba(123, 123, 123, 0.804);
+}
+body main .box > .btn > div {
+  color: rgba(88, 88, 87, 0.6);
+  transform: scaleX(1.3) rotate(90deg);
+  margin-left: 2px;
+}
+body main .box .solar {
+  width: 100%;
+  height: 100%;
+  transform: perspective(800px) rotateX(60deg);
+  position: relative;
+  transform-style: preserve-3d;
+}
+body main .box .solar > * {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(14, 14, 14);
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.379);
+  text-align: center;
+  font-size: 200px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 100px;
+  transform: translate(-50%, -50%) rotateX(298deg);
+  top: 0%;
+  padding-bottom: 500px;
+}
+body main .box .solar h2 {
+  color: rgba(45, 45, 45, 0.0235294118);
+  text-align: center;
+  padding-top: 10px;
+  font-size: 40px;
+  transform: perspective(800px) translate(-50%, -50%) rotateX(353deg) translateZ(-110px);
+  z-index: -100;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-shadow: 1px 1px 4px rgba(244, 244, 244, 0.112);
+}
+body main .box .solar > figure {
+  width: 15%;
+  height: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(-60deg);
+}
+body main .box .solar > figure > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  animation: sun linear infinite 300s;
+}
+body main .box .solar .mercury {
+  width: 150px;
+  height: 150px;
+  border: 0.1px solid rgba(128, 128, 128, 0.521);
+  transform-style: preserve-3d;
+}
+body main .box .solar .mercury .mercuryPlanet {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transform-origin: 83px 50%;
+  animation: mercury1 3s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+body main .box .solar .mercury .mercuryPlanet > div {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/cover url(../img/mercury.webp);
+  border-radius: 50%;
+  transform: rotateX(-100deg);
+  box-shadow: 0 0 10px 2px rgba(52, 52, 52, 0.804);
+  background-position: 900px 0;
+  animation: mercury2 3s linear infinite;
+  transform-style: preserve-3d;
+}
+body main .box .solar .mercury .mercuryPlanet > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgb(3, 3, 3);
+  background: linear-gradient(90deg, rgba(3, 3, 3, 0.466) 21%, rgba(79, 80, 81, 0.374) 50%, rgba(18, 19, 20, 0.557) 71%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: before 3s linear infinite;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar .venus {
+  width: 200px;
+  height: 200px;
+  border: 0.1px solid rgba(128, 128, 128, 0.521);
+  transform-style: preserve-3d;
+}
+body main .box .solar .venus .venusPlanet {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transform-origin: 112px 50%;
+  animation: mercury1 8s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+body main .box .solar .venus .venusPlanet > div {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/cover url(../img/venus.webp);
+  border-radius: 50%;
+  transform: rotateX(-100deg);
+  box-shadow: 0 0 10px 2px rgba(52, 52, 52, 0.804);
+  background-position: 900px 0;
+  animation: mercury2 8s linear infinite;
+  transform-style: preserve-3d;
+}
+body main .box .solar .venus .venusPlanet > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgb(3, 3, 3);
+  background: linear-gradient(90deg, rgba(3, 3, 3, 0.466) 21%, rgba(79, 80, 81, 0.374) 50%, rgba(18, 19, 20, 0.557) 71%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: before 8s linear infinite;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar .earth {
+  width: 300px;
+  height: 300px;
+  border: 0.1px solid rgba(128, 128, 128, 0.521);
+  transform-style: preserve-3d;
+}
+body main .box .solar .earth .earthPlanet {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0.1px solid rgba(128, 128, 128, 0.347);
+  transform-origin: 180px 50%;
+  animation: mercury1 11s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+body main .box .solar .earth .earthPlanet > span {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform-style: preserve-3d;
+  animation: earth2 3s linear infinite;
+  transform-origin: 35px 50%;
+  background-color: rgba(211, 210, 210, 0.404);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar .earth .earthPlanet > div {
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: no-repeat center/cover url(../img/earth.webp);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotateX(-100deg);
+  box-shadow: 0 0 10px 2px rgba(52, 52, 52, 0.804);
+  background-position: 500px 0;
+  animation: earth 11s linear infinite;
+  transform-style: preserve-3d;
+}
+body main .box .solar .earth .earthPlanet > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgb(3, 3, 3);
+  background: linear-gradient(90deg, rgba(3, 3, 3, 0.589) 21%, rgba(79, 80, 81, 0.525) 50%, rgba(18, 19, 20, 0.612) 71%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: before 11s linear infinite;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar .mars {
+  width: 380px;
+  height: 380px;
+  border: 0.1px solid rgba(96, 95, 95, 0.521);
+  transform-style: preserve-3d;
+}
+body main .box .solar .mars .marsPlanet {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transform-origin: 199px 50%;
+  animation: mercury1 45s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+body main .box .solar .mars .marsPlanet > div {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/cover url(../img/mars.webp);
+  border-radius: 50%;
+  transform: rotateX(-100deg);
+  box-shadow: 0 0 10px 2px rgba(52, 52, 52, 0.804);
+  background-position: 900px 0;
+  animation: mercury2 45s linear infinite;
+  transform-style: preserve-3d;
+}
+body main .box .solar .mars .marsPlanet > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgb(3, 3, 3);
+  background: linear-gradient(90deg, rgba(3, 3, 3, 0.708) 21%, rgba(79, 80, 81, 0.374) 50%, rgba(18, 19, 20, 0.731) 71%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: before 45s linear infinite;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar .orbit {
+  width: 450px;
+  height: 450px;
+  border: 5px dashed rgba(96, 95, 95, 0.315);
+  transform-origin: 225px 50%;
+  transform-style: preserve-3d;
+  animation: mercury1 30s linear infinite;
+}
+body main .box .solar .jupiter {
+  width: 560px;
+  height: 560px;
+  border: 0.1px solid rgba(96, 95, 95, 0.521);
+  transform-style: preserve-3d;
+}
+body main .box .solar .jupiter .jupiterPlanet {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform-origin: 310px 50%;
+  animation: mercury1 240s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+body main .box .solar .jupiter .jupiterPlanet > div {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/cover url(../img/jupiter.webp);
+  border-radius: 50%;
+  transform: rotateX(-100deg);
+  box-shadow: 0 0 10px 2px rgba(52, 52, 52, 0.804);
+  background-position: 2000px 0;
+  animation: jupiter2 240s linear infinite;
+  transform-style: preserve-3d;
+}
+body main .box .solar .jupiter .jupiterPlanet > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgb(3, 3, 3);
+  background: linear-gradient(90deg, rgba(3, 3, 3, 0.708) 21%, rgba(79, 80, 81, 0.374) 50%, rgba(18, 19, 20, 0.731) 71%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: before 240s linear infinite;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar .satrun {
+  width: 630px;
+  height: 630px;
+  border: 0.1px solid rgba(96, 95, 95, 0.521);
+  transform-style: preserve-3d;
+}
+body main .box .solar .satrun .satrunPlanet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transform-origin: -298px 50%;
+  animation: mercury1 600s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  outline: 4px solid rgba(129, 94, 4, 0.571);
+  outline-offset: 1px;
+}
+body main .box .solar .satrun .satrunPlanet > div {
+  width: 100%;
+  height: 100%;
+  background: no-repeat left/contain url(../img/jupiter.webp);
+  border-radius: 50%;
+  transform: rotateX(-100deg);
+  box-shadow: 0 0 10px 2px rgba(52, 52, 52, 0.804);
+  background-position: 2000px 0;
+  animation: jupiter2 600s linear infinite;
+  transform-style: preserve-3d;
+}
+body main .box .solar .satrun .satrunPlanet > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgb(3, 3, 3);
+  background: linear-gradient(90deg, rgba(3, 3, 3, 0.708) 21%, rgba(79, 80, 81, 0.374) 50%, rgba(18, 19, 20, 0.731) 71%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar .uranus {
+  width: 700px;
+  height: 700px;
+  border: 0.1px solid rgba(128, 128, 128, 0.521);
+  transform-style: preserve-3d;
+}
+body main .box .solar .uranus .uranusPlanet {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform-origin: 365px 50%;
+  animation: mercury1 600s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+body main .box .solar .uranus .uranusPlanet > div {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/cover url(../img/uranus.webp);
+  border-radius: 50%;
+  transform: rotateX(-100deg);
+  box-shadow: 0 0 10px 2px rgba(52, 52, 52, 0.804);
+  background-position: 900px 0;
+  animation: mercury2 600s linear infinite;
+  transform-style: preserve-3d;
+}
+body main .box .solar .uranus .uranusPlanet > div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgb(3, 3, 3);
+  background: linear-gradient(90deg, rgba(3, 3, 3, 0.466) 21%, rgba(79, 80, 81, 0.374) 50%, rgba(18, 19, 20, 0.557) 71%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: before 600s linear infinite;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+body main .box .solar .neptun {
+  width: 750px;
+  height: 750px;
+  border: 0.1px solid rgba(128, 128, 128, 0.521);
+  transform-style: preserve-3d;
+}
+body main .box .solar .neptun .neptunPlanet {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transform-origin: 50% 387px;
+  animation: mercury1 700s linear infinite;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+body main .box .solar .neptun .neptunPlanet > div {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/cover url(../img/neptun.webp);
+  border-radius: 50%;
+  transform: rotateX(-100deg);
+  box-shadow: 0 0 10px 2px rgba(52, 52, 52, 0.804);
+  background-position: 900px 0;
+  animation: mercury2 700s linear infinite;
+  transform-style: preserve-3d;
+}
+body main .listDes {
+  background: #000000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  position: relative;
+}
+body main .listDes > .btn2 {
+  cursor: pointer;
+  position: absolute;
+  z-index: 999;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 50px;
+  background: none;
+  border: 3px solid rgba(215, 212, 212, 0.804);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: capitalize;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+body main .listDes > .btn2:hover {
+  color: rgba(255, 255, 255, 0.406);
+  border: 3px solid rgba(123, 123, 123, 0.804);
+}
+body main .listDes > .btn2 > div {
+  color: rgba(88, 88, 87, 0.6);
+  transform: scaleX(1.3) rotate(-90deg);
+  margin-left: 2px;
+}
+body main .listDes .img2 {
+  transform-style: preserve-3d;
+}
+body main .listDes > .desc {
+  height: 80vh;
+  width: 15%;
+}
+body main .listDes > .desc > .list {
+  width: 250px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+body main .listDes > .desc > .list > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .listDes > .desc > .list:nth-of-type(1) > figure > span {
+  opacity: 1;
+}
+body main .listDes > .desc > .list > figure {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  position: relative;
+}
+body main .listDes > .desc > .list > figure > span {
+  display: flex;
+  background: white;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  z-index: 3;
+  opacity: 0;
+}
+body main .listDes > .desc > .list > figure > img {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  border-bottom: 3px solid rgba(195, 195, 195, 0.128);
+  border-radius: 50%;
+}
+body main .listDes > .desc > .list > figure::before, body main .listDes > .desc > .list > figure::after {
+  content: "";
+  display: flex;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+}
+body main .listDes > .desc > .list > figure::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  outline: 3px solid rgb(113, 113, 113);
+  position: absolute;
+  z-index: 10;
+  top: 18%;
+  left: 12%;
+}
+body main .listDes > .desc > .list > figure::after {
+  width: 60%;
+  height: 60%;
+  z-index: 2;
+  background: rgb(3, 3, 3);
+  background: linear-gradient(0deg, rgba(3, 3, 3, 0.699) 52%, rgba(238, 241, 244, 0.3450630252) 95%, rgba(18, 19, 20, 0.7232142857) 150%);
+}
+body main .listDes > .desc > .list > section {
+  width: 100px;
+  height: 50px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+}
+body main .listDes > .desc > .list > section > * {
+  width: 80%;
+}
+body main .listDes > .desc > .list > section > p {
+  font-size: 10px;
+}
+body main .listDes > .img2 {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .listDes > .img2 .box3d {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+}
+body main .listDes > .img2 .box3d > div {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: perspective(650px);
+  transform-style: preserve-3d;
+}
+body main .listDes > .img2 .box3d > div > .img3dChild {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+body main .listDes > .img2 .box3d > div > .img3dChild > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: pllanet 3s infinite alternate;
+}
+body main .listDes .explain {
+  width: 20%;
+  height: 80vh;
+  margin-right: 60px;
+  position: relative;
+}
+body main .listDes .explain > section {
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+body main .listDes .explain > section > h3 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 60px;
+  padding-bottom: 30px;
+  color: black;
+  text-shadow: 1px 1px 3px white;
+}
+body main .listDes .explain > section > p {
+  color: rgb(222, 222, 223);
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+}
+body main .listDes .explain > div {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+body main .listDes .explain > div > figure {
+  width: 100%;
+  height: 50%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+body main .listDes .explain > div > figure > img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+body main .listDes .explain > div div > h6 {
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-size: 17px;
+  margin: auto;
+  font-family: "Patrick Hand", cursive;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+}
+
+@keyframes sun {
+  to {
+    transform: rotate3d(1, 1, 10, 360deg);
+  }
+}
+@keyframes mercury1 {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes mercury2 {
+  to {
+    background-position: 200px 0;
+    transform: rotateX(-100deg) rotateY(360deg);
+  }
+}
+@keyframes jupiter2 {
+  to {
+    background-position: 1000px 0;
+    transform: rotateX(-100deg) rotateY(360deg);
+  }
+}
+@keyframes earth {
+  to {
+    background-position: 1000px 0;
+    transform: translate(-50%, -50%) rotateX(-70deg) rotateY(360deg);
+  }
+}
+@keyframes earth2 {
+  to {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+@keyframes before {
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pllanet {
+  to {
+    transform: translateY(-2px);
+  }
+}
